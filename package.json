@@ -1,0 +1,68 @@
+{
+  "name": "add-registration",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "daxko-react-scripts": "0.18.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "build": "react-scripts build",
+    "ci": "cross-env CI=true npm run test && npm run test:e2e:headless",
+    "cy": "cypress open",
+    "cy:headless": "cypress run",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .ts,.tsx ./src --fix",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cy",
+    "test:e2e:headless": "start-server-and-test start http://localhost:3000 cy:headless"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "plugins": [
+      "cypress",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "env": {
+      "cypress/globals": true
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm t"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

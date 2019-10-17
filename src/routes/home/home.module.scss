@@ -1,0 +1,28 @@
+@import "../../assets/styles/colors";
+
+// This is a demonstration of how SCSS variables can be exported and used in JS
+:export { codeColor: $codeColor; }
+
+.home {
+  border: 1px dashed $borderColor;
+  padding: 18px;
+}
+
+.Yes {
+  color: #27ae60;
+}
+
+.No {
+  color: #c0392b;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    margin-bottom: 12px;
+    max-width: 320px;
+    padding: 6px;
+  }
+}

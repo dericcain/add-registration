@@ -1,0 +1,21 @@
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+}
+
+.default {
+  background: #333;
+}
+
+.primary {
+  background: #2980b9;
+}
+
+.success {
+  background: #27ae60;
+}
