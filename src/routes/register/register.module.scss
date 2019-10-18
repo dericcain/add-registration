@@ -1,0 +1,24 @@
+.title {
+  text-align: center;
+}
+
+.form {
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+
+  button {
+    margin-top: 18px;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+
+  input {
+    padding: 6px;
+  }
+}

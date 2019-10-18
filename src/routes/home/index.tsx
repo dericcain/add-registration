@@ -3,7 +3,7 @@ import { RouteComponentProps } from '@reach/router';
 
 import { connect } from 'Utils/connect';
 import styles from './home.module.scss';
-import { Button, ButtonType } from 'Components/button';
+import { Button } from 'Components/button';
 
 // RouteComponentProps comes from @types/reach__router
 type HomeProps = RouteComponentProps & {
@@ -19,7 +19,7 @@ export const Home: React.FC<HomeProps> = ({ appVersion }) => {
 
   return (
     <div className={styles.home}>
-      <h4>Your app is bootstrapped and ready to go...</h4>
+      <h4>Home</h4>
       <code style={{ color: styles.codeColor }}>App version: {appVersion}</code>
       <hr />
       <div className={styles.inputWrapper}>
@@ -34,7 +34,7 @@ export const Home: React.FC<HomeProps> = ({ appVersion }) => {
         <input id="nothing" value="This input does nothing." readOnly />
       </div>
       <Button onClick={onClick}>Click me!</Button>
-      <Button onClick={onClick} type={ButtonType.Primary}>
+      <Button onClick={onClick} color="primary">
         And me!
       </Button>
     </div>

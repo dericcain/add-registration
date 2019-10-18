@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import { Features } from 'react-tiny-feature-switch';
 import axios from 'axios';
+import { navigate } from '@reach/router';
 
 import features from './features.json';
 import { RootStore } from 'Stores';
@@ -15,7 +16,7 @@ const axiosInstance = axios.create({
   baseURL: process.env.DAXKO_APP_API_URL,
 });
 
-const store = new RootStore(new Request(axiosInstance));
+const store = new RootStore({ request: new Request(axiosInstance), navigate });
 
 const rootElement = document.getElementById('root');
 

@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$1WxT9I6m18Sqrxvu4vO6CeKsdBLrg/7P6rJz/SYLFNfOvq4RWkJPK",
+      "id": 1
+    },
+    {
+      "email": "deric@test.com",
+      "password": "$2a$10$sq.xyT5Ah9jch8GDYViHgevf0oKqvGpfIoT2mXzMPw61GXwjwJh2a",
+      "id": 2
+    },
+    {
+      "email": "nit@ku.bj",
+      "password": "$2a$10$Y89RS8J3IOd6uHsWULbLQuhXWtuzaGNsHOW37yA8QAj0s.aLY60jO",
+      "id": 3
+    },
+    {
+      "email": "peocubo@ebenen.mm",
+      "password": "$2a$10$eynJhXb4jdzaqgopLKeireiLSJDei9OoobXrYIlhmmfrrFWxo04N.",
+      "id": 4
+    },
+    {
+      "email": "nafurfav@pi.eg",
+      "password": "$2a$10$67qr/cxdZG/GqEwqxuxceOgjf0NPtZbtagl6x3sj.0bxG0tPues6W",
+      "id": 5
+    },
+    {
+      "email": "ane@hucodiz.tw",
+      "password": "$2a$10$H9Hpp5iuL5v6PAuOSweDUuitmfr1H0Hfbi6H3Oe4KgDdQUpJxo2vW",
+      "id": 6
+    },
+    {
+      "email": "zoje@mo.is",
+      "password": "$2a$10$FRFWJqokAwYXa9xKedRoc./F3QUOzJcEU6zTOjFVnB8pGFjKbkjWe",
+      "id": 7
+    },
+    {
+      "email": "buerico@kuvifac.net",
+      "password": "$2a$10$.0BFS0zdKIXtZGQnD9dezOQ0/OaBst/qmb.bhcmlMuakDaj2iY7Le",
+      "id": 8
+    },
+    {
+      "email": "vif@engibgu.kp",
+      "password": "$2a$10$nMGJila35NWCL6tBBHMECOw27O3IdJbkJR7NHUi/aQsBH2MbmMlOW",
+      "id": 9
+    },
+    {
+      "email": "nacip@lezolu.kn",
+      "password": "$2a$10$s3u6eQFk62LOGwu5pqTNgeA/plUZ9dDy45q7eO6ibDZtMhU.J8bke",
+      "id": 10
+    },
+    {
+      "email": "rewja@je.do",
+      "password": "$2a$10$Hleaj.cY1/QX2ZwhB62paulbYJpnTFBdRso5UKD6Vuq7mMaaeL17O",
+      "id": 11
+    },
+    {
+      "email": "hujapit@cu.tr",
+      "password": "$2a$10$nfy91ceAmeblyg1lhHdujO4icR2iaPnzosqNAeIB/D1J2fadUIvsG",
+      "id": 12
+    },
+    {
+      "email": "cauzouvi@id.eg",
+      "password": "$2a$10$MZQIYgkjIQq6Prq.QzIV1.Tm2QwMyDJfBtPxCnudzamp6fumsvCWq",
+      "id": 13
+    },
+    {
+      "email": "mi@odme.ao",
+      "password": "$2a$10$XfZ0OtxublA7WNKbJ3hTbuVyiqB7AKWYFZXNSizMjRjjlGotzb2ka",
+      "id": 14
+    }
+  ]
+}

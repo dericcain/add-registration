@@ -1,2 +1,2 @@
-/// <reference types="react-scripts" />
+/// <reference types="daxko-react-scripts" />
 declare module '*.scss';

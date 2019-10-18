@@ -2,24 +2,21 @@ import React from 'react';
 
 import styles from './button.module.scss';
 
-export enum ButtonType {
-  Default = 'default',
-  Primary = 'primary',
-}
-
 interface ButtonProps {
-  type?: ButtonType;
+  color?: 'primary' | 'default';
   children: React.ReactNode;
-  onClick: () => void;
+  onClick: (e?: any) => void;
+  type?: 'submit' | 'button';
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  type = ButtonType.Default,
+  color = 'default',
   children,
   onClick,
+  type,
   ...props
 }) => (
-  <button className={`${styles.button} ${styles[type]}`} onClick={onClick} {...props}>
+  <button className={`${styles.button} ${styles[color]}`} onClick={onClick} type={type} {...props}>
     {children}
   </button>
 );

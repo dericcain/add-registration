@@ -23,3 +23,14 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+Cypress.Commands.add('fillRegistration', ({ firstName, lastName, email, password }) => {
+  cy.visit('/register')
+    .findByTestId('firstName')
+    .type(firstName)
+    .findByTestId('lastName')
+    .type(lastName)
+    .findByTestId('email')
+    .type(email)
+    .findByTestId('password')
+    .type(password);
+});

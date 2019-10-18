@@ -48,7 +48,7 @@ export class Request implements IRequest {
       return data;
     } catch (e) {
       // Axios throws if we do not receive a 2XX
-      return e.response;
+      throw e.response;
     }
   }
 
