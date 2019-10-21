@@ -22,3 +22,19 @@
     padding: 6px;
   }
 }
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.error {
+  display: flex;
+  background-color: #B00020;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  color: #FFF;
+}

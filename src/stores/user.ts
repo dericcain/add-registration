@@ -35,9 +35,10 @@ export class UserStore {
       const token = await this.userService.register(email, password);
       this.createUser({ firstName, lastName, email });
       await this.rootStore.uiStore.navigate('/');
-    } catch (error) {
+    } catch ({ statusText }) {
       // TODO: Create a UI store
-      throw new Error(error);
+      this.rootStore.uiStore.setErrors([statusText, ...this.rootStore.uiStore.errors]);
+      console.log(this.rootStore.uiStore.errors);
     }
   };
 }

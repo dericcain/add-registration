@@ -8,6 +8,7 @@ import { RouteComponentProps } from '@reach/router';
 
 type RegisterProps = RouteComponentProps & {
   register: (user: RegisterArgs) => void;
+  errors: string[];
 };
 
 function Field({
@@ -38,7 +39,15 @@ function Field({
   );
 }
 
-function Register({ register }: RegisterProps) {
+function ErrorSnack(text: string, index: number) {
+  return (
+    <div className={styles.error} key={`text-${index}`}>
+      {text}
+    </div>
+  );
+}
+
+function Register({ register, errors }: RegisterProps) {
   const initialState = {
     firstName: '',
     lastName: '',
@@ -75,10 +84,14 @@ function Register({ register }: RegisterProps) {
           Submit
         </Button>
       </form>
+      <div className={styles.errorContainer}>
+        {errors.map((text: string, index) => ErrorSnack(text, index))}
+      </div>
     </div>
   );
 }
 
 export default connect(({ store }) => ({
   register: store.userStore.register,
+  errors: store.uiStore.errors,
 }))(Register);
