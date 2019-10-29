@@ -4,15 +4,15 @@ import { NavigateFn } from '@reach/router';
 export class UiStore {
   @observable public isLoading = false;
 
-  @observable public errors: String[] = [];
+  public errors = observable.array<string>([]);
 
   @computed public get mostRecentErrorMessage() {
     return this.errors[0];
   }
 
   @action
-  public setErrors(errors: String[]) {
-    this.errors = errors;
+  public setErrors(errors: string[]) {
+    this.errors.replace(errors);
   }
 
   public constructor(public navigate: NavigateFn) {}
