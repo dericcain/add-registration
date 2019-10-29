@@ -11,6 +11,10 @@ type RegisterProps = RouteComponentProps & {
   errors: string[];
 };
 
+interface ErrorSnackProps {
+  text: string;
+}
+
 function Field({
   name,
   state,
@@ -39,13 +43,11 @@ function Field({
   );
 }
 
-function ErrorSnack(text: string, index: number) {
-  return (
-    <div className={styles.error} key={`text-${index}`}>
-      {text}
-    </div>
-  );
-}
+const ErrorSnack: React.FC<ErrorSnackProps> = ({ text }) => (
+  <div className={styles.error} key={text}>
+    {text}
+  </div>
+);
 
 function Register({ register, errors }: RegisterProps) {
   const initialState = {
@@ -85,7 +87,9 @@ function Register({ register, errors }: RegisterProps) {
         </Button>
       </form>
       <div className={styles.errorContainer}>
-        {errors.map((text: string, index) => ErrorSnack(text, index))}
+        {errors.map((text: string) => (
+          <ErrorSnack text={text} />
+        ))}
       </div>
     </div>
   );
