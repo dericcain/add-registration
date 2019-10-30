@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
+import { enableLogging } from 'mobx-logger';
 import { Features } from 'react-tiny-feature-switch';
 import axios from 'axios';
 import { navigate } from '@reach/router';
@@ -11,6 +12,8 @@ import { Request } from 'Utils/request';
 import App from './app';
 import * as serviceWorker from './service-worker';
 import './index.scss';
+
+enableLogging();
 
 const axiosInstance = axios.create({
   baseURL: process.env.DAXKO_APP_API_URL,

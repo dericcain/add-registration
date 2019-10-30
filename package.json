@@ -35,7 +35,7 @@
       "prettier"
     ],
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": "off"
     },
     "env": {
       "cypress/globals": true
@@ -92,6 +92,7 @@
     "json-server": "^0.15.1",
     "json-server-auth": "^1.2.1",
     "lint-staged": "^9.4.2",
+    "mobx-logger": "^0.7.1",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
     "sass": "^1.23.0",

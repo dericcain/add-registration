@@ -69,6 +69,21 @@
       "email": "mi@odme.ao",
       "password": "$2a$10$XfZ0OtxublA7WNKbJ3hTbuVyiqB7AKWYFZXNSizMjRjjlGotzb2ka",
       "id": 14
+    },
+    {
+      "email": "foo@bar.com",
+      "password": "$2a$10$Nx.dnrmMcwd1wnh1lcHaaeeQw60e3fC7ITSDPFBNqG0Oj2C0VT9r6",
+      "id": 15
+    },
+    {
+      "email": "one@more.com",
+      "password": "$2a$10$IzA2kmCtpFzFUnt.ZHxs1.bd8YU3YG0E1gmFW/Psbv3IEZIG7M9uK",
+      "id": 16
+    },
+    {
+      "email": "sfdgsdfklj@lkjsdf.com",
+      "password": "$2a$10$h8r5uND8JLzkNVyvvmOsfOVA4y9TTpkJXCvNh8/ZfQuLSpEpJYAp6",
+      "id": 17
     }
   ]
 }

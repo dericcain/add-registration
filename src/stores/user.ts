@@ -20,6 +20,8 @@ export class UserStore {
     return !!this.user;
   }
 
+  // Actions batch updates so that if multiple pieces of state are updated at once, there is only
+  // one notification sent to the listeners (observers). This cuts wasted renders.
   @action
   public createUser = (user: UserArgs) => {
     this.user = new User(this, user);
@@ -32,11 +34,10 @@ export class UserStore {
     password,
   }: RegisterArgs): Promise<void> => {
     try {
-      const token = await this.userService.register(email, password);
+      await this.userService.register(email, password);
       this.createUser({ firstName, lastName, email });
       await this.rootStore.uiStore.navigate('/');
     } catch (error) {
-      // TODO: Create a UI store
       throw new Error(error);
     }
   };
