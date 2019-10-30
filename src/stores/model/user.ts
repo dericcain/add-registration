@@ -1,4 +1,4 @@
-import { observable, computed } from 'mobx';
+import { observable, computed, decorate } from 'mobx';
 
 import { UserStore } from '../user';
 
@@ -34,6 +34,14 @@ export class User {
     return `${this.firstName} ${this.lastName}`;
   }
 }
+
+// Decorate API
+export default decorate(User, {
+  firstName: observable,
+  lastName: observable,
+  email: observable,
+  fullName: computed
+})
 
 // When using objects, all getters are automatically converted to computed properties.
 // Pros:

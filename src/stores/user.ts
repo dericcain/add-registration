@@ -12,7 +12,10 @@ export interface RegisterArgs {
 }
 
 export class UserStore {
-  @observable public user?: User;
+  // This is where models are managed. This could just as easily be an array/list of models which
+  // are observables. This is an observable.ref because User is already an observable so it
+  // will already track its own changes. We just need to know if this is a new reference.
+  @observable.ref public user?: User;
 
   public constructor(private rootStore: RootStore, private userService: UserService) {}
 
